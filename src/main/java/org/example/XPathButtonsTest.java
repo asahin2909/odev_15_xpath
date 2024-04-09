@@ -23,7 +23,7 @@ public class XPathButtonsTest {
         clickMeButton.click();
 
         // Görünen mesajı oku
-        WebElement message = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("dynamicClickMessage")));
+        WebElement message = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='doubleClickMessage']")));
         System.out.println("Görünen mesaj: " + message.getText());
 
         driver.quit();

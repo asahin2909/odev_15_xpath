@@ -14,30 +14,30 @@ public class XPathWebTablesTest {
         driver.get("https://demoqa.com/webtables");
 
         // "ADD" düğmesine tıkla
-        WebElement addButton = driver.findElement(By.id("addNewRecordButton"));
+        WebElement addButton = driver.findElement(By.xpath("//button[@id='addNewRecordButton']"));
         addButton.click();
 
         // Yeni kayıt formunu doldur
-        WebElement firstNameInput = driver.findElement(By.id("firstName"));
-        firstNameInput.sendKeys("Abdullah");
+        WebElement firstNameInput = driver.findElement(By.xpath("//input[@id='firstName']"));
+        firstNameInput.sendKeys("John");
 
-        WebElement lastNameInput = driver.findElement(By.id("lastName"));
-        lastNameInput.sendKeys("Şahin");
+        WebElement lastNameInput = driver.findElement(By.xpath("//input[@id='lastName']"));
+        lastNameInput.sendKeys("Doe");
 
-        WebElement emailInput = driver.findElement(By.id("userEmail"));
-        emailInput.sendKeys("asahin@example.com");
+        WebElement emailInput = driver.findElement(By.xpath("//input[@id='userEmail']"));
+        emailInput.sendKeys("johndoe@example.com");
 
-        WebElement ageInput = driver.findElement(By.id("age"));
-        ageInput.sendKeys("36");
+        WebElement ageInput = driver.findElement(By.xpath("//input[@id='age']"));
+        ageInput.sendKeys("30");
 
-        WebElement salaryInput = driver.findElement(By.id("salary"));
-        salaryInput.sendKeys("500000");
+        WebElement salaryInput = driver.findElement(By.xpath("//input[@id='salary']"));
+        salaryInput.sendKeys("50000");
 
-        WebElement departmentInput = driver.findElement(By.id("department"));
-        departmentInput.sendKeys("TEST");
+        WebElement departmentInput = driver.findElement(By.xpath("//input[@id='department']"));
+        departmentInput.sendKeys("IT");
 
         // Kaydet düğmesine tıkla
-        WebElement saveButton = driver.findElement(By.xpath("//button[text()='Submit']"));
+        WebElement saveButton = driver.findElement(By.xpath("//button[@id='submit']"));
         saveButton.click();
 
         // Eklenen kaydı bul
@@ -48,11 +48,11 @@ public class XPathWebTablesTest {
         editButton.click();
 
         // Kaydı güncelle
-        WebElement updatedFirstNameInput = driver.findElement(By.id("firstName"));
+        WebElement updatedFirstNameInput = driver.findElement(By.xpath("//input[@id='firstName']"));
         updatedFirstNameInput.clear();
-        updatedFirstNameInput.sendKeys("Alperen");
+        updatedFirstNameInput.sendKeys("Jane");
 
-        WebElement updateButton = driver.findElement(By.xpath("//button[text()='Submit']"));
+        WebElement updateButton = driver.findElement(By.xpath("//button[@id='submit']"));
         updateButton.click();
 
         driver.quit();
